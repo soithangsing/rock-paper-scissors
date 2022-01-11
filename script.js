@@ -1,59 +1,76 @@
 'use strict';
 
-const gameObjects = ['rock', 'paper', 'scissors'];
+const weapons = ['rock', 'paper', 'scissor'];
 
-function computerPlay () {
-  const computerPick = gameObjects[Math.floor(Math.random() * gameObjects.length)];
-  return computerPick;
-}
+let playerScore = 0, computerScore = 0;
 
-// const playerInput = prompt(`Let's play Rock, Paper and Scissors! \n Please type in one of the following: \n (1) Rock \n (2) Paper \n (3) Scissors`).toLowerCase();
+const playButton = document.querySelector('.play-button');
+const reloadButton = document.querySelector('.reload');
 
-function playRound(playerSelection, computerSelection) {
-//  What to do to play one round? 
+function randomPick () {
+    const randomPick = weapons[Math.floor(Math.random() * weapons.length)];
+    return randomPick;
+  }
 
-// compare player selection to computer selection 
+function playRound (playerSelection, computerSelection) {
 
-if (playerSelection === gameObjects[0] && computerSelection === gameObjects[2]) {
-    return(`You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You have won! Rock beats Scissors!`)
-} else if (playerSelection === gameObjects[1] && computerSelection === gameObjects[0]) {
-    return(`You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You have won! Paper beats Rock!`) }
-else if (playerSelection === gameObjects[2] && computerSelection === gameObjects[1]) {
-    return(`You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You have won! Scissors beat Paper!`)
-} else if (computerSelection === gameObjects[0] && playerSelection === gameObjects[2]) {
-    return(`You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You lost! Rock beats Scissors!`)
-} else if (computerSelection === gameObjects[1] && playerSelection === gameObjects[0]) {
-    return(`You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You lost! Paper beats Rock!`) }
-else if (computerSelection === gameObjects[2] && playerSelection === gameObjects[1]) {
-    return(`You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You lost! Scissors beat Paper!`)
-} else {
-    return(`You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n It's a tie!`)
-}
+   if(playerSelection === computerSelection) {
+       return `Computer picked the same sooo It's a tie man!`;
+   } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+       return `You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n Computer wins! Paper beats rock!`;
+   } else if (playerSelection === 'rock' && computerSelection === 'scissor') {
+       return `You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You win! Rock beats scissor!`;
+   }
+
+   if(playerSelection === 'paper' && computerSelection === 'rock') {
+       return `You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You win! Paper beats rock!`;
+   } else if (playerSelection === 'paper' && computerSelection === 'scissor') {
+       return `You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n Computer wins! Scissor beats paper!`;
+   }
+
+   if(playerSelection === 'scissor' && computerSelection === 'rock') {
+       return `You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n Computer wins! Rock beats scissor!`;
+   } else if (playerSelection === 'scissor' && computerSelection === 'paper') {
+       return `You selected: ${playerSelection} \n Computer selected: ${computerSelection} \n You win! Scissor beats paper!`;
+   }
 }
 
 function game() {
-    let playerScore=0;
-    let computerScore=0;
-    for (let i=0; i <=4; i++) {
-        const playerGameInput = prompt(`Let's play Rock, Paper and Scissors! \n Please type in one of the following: \n (1) Rock \n (2) Paper \n (3) Scissors`).toLowerCase();
-        console.log(playRound(playerGameInput, computerPlay()));
+    console.log(`----- 🛡🗡 THE BATTLE BEGINS 🛡🗡 -----`);
 
-        if (playRound(playerGameInput, computerPlay()).includes('You have won!')) {
-        playerScore += 1;
-        } else if (playRound(playerGameInput, computerPlay()).includes('You lost!')) {
-        computerScore += 1;
+    for (let i =0; i < 5; i++) {
+        const playerPick = prompt('Greetings Challenger! 😤 \n Please choose your weapon \n (1) ✊ Rock ✊ \n (2) ✋ Paper ✋\n (3) ✌️ Scissor ✌️ \n And please type it with the correct spelling below! (Case doesn\'t matter)').toLowerCase();
+
+        const gameRun = playRound(playerPick, randomPick());
+
+        console.log(gameRun);
+
+        if (gameRun.includes('You win!')) {
+            playerScore++;
+        } else if (gameRun.includes('Computer wins!')) {
+            computerScore++;
         }
+        
     }
-
-    if (playerScore > computerScore) {
-        return(`You are the winner with score: ${playerScore}!`)
-    } else if (playerScore < computerScore) {
-        return(`Oops! Computer won with score: ${computerScore}!`)
-    }
-    else 
-    {
-        return(`It's a tie!!! You scored: ${playerScore} while computer scored ${computerScore}`)
+    if (playerScore > computerScore && playerScore <= 5) {
+        return `----- 🛡🗡🔥  THE BATTLE HAS ENDED 🔥🛡🗡 -----\n You have achieved victory over artificial intelligence! Congratulations! 🥳 \n Your Score ${playerScore} to Computer Score ${computerScore} \n Please press RELOAD to play again!`
+    } else if (computerScore > playerScore && computerScore <= 5) {
+        return `----- 🛡🗡🔥  THE BATTLE HAS ENDED 🔥🛡🗡 -----\n Oh No! The computer reigns supreme over their human overlords! You Lose! 😟 \n Your Score ${playerScore} to Computer Score ${computerScore} \n Please press RELOAD to play again!`
+    } else {
+        return `----- 🛡🗡🔥  THE BATTLE HAS ENDED 🔥🛡🗡 -----\n It is a DRAW between two great minds! 🤯 \n Your Score ${playerScore} to Computer Score ${computerScore} \n Please press RELOAD to play again!`
     }
 }
 
-console.log(game());
+
+function executePlay () {
+    // const playerPick = prompt('Greetings Challenger! 😤 \n Please choose your weapon \n (1) ✊ Rock ✊ \n (2) ✋ Paper ✋\n (3) ✌️ Scissor ✌️ \n And please type it with the correct spelling below! (Case doesn\'t matter)').toLowerCase();
+    // console.log(playerPick)
+    return console.log(game());
+}
+
+function reloadPage () {
+    location.reload()
+}
+
+playButton.addEventListener('click', executePlay)
+reloadButton.addEventListener('click', reloadPage)
