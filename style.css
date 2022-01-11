@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Walter+Turncoat&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Walter Turncoat', Roboto;
+}
+
+.header {
+    align-self: center;
+    font-size: 48px;
+    font-family: 'Permanent Marker', Helvetica;
+}
+
+.text-content {
+    text-align: center;
+    align-self: center;
+    font-size: 24px;
+}
+
+.play-area{
+    align-self: center;
+}
+
+.play-area button {
+    font-size: 22px;
+    padding: 16px;
+    background-color: #48f542;
+    color:ivory;
+    font-weight: bold;
+    border-radius: 8px;
+    font-family: 'Permanent Marker', Helvetica;
+}
