@@ -1,20 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
 
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
-    font-family: 'Walter Turncoat', Roboto;
+    font-family: 'Nova Mono', monospace;
     background-color: #28282B;
     color: #FFFFF0;
+    overflow:hidden;
+    align-items:center;
+    justify-content:center;
+    gap: 4rem;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(242deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+}
+
+main {
+    position: relative;
+    width: 100rem;
+    height: 60rem;
+    backdrop-filter: blur(200px);
+    filter:blur;
+    box-shadow: 0 3rem 5rem rgba(0,0,0,0.25);
+    border-radius: 9px;
+    display: flex;
+    overflow: hidden;
 }
 
 .header {
-    align-self: center;
-    font-size: 48px;
-    font-family: 'Permanent Marker', Helvetica;
+    align-self: flex-start;
+    font-size: 32px;
+    font-family: 'Nova Mono', monospace;
     text-align: center;
+    width: 100%;
 }
 
 .text-content {
@@ -34,5 +62,100 @@ body {
     color:ivory;
     font-weight: bold;
     border-radius: 8px;
-    font-family: 'Permanent Marker', Helvetica;
+    font-family: 'Nova Mono', monospace;
+}
+
+.display-area {
+    align-self: center;
+}
+
+.play-buttons-container {
+    align-self:center;
+}
+
+.score-keeper-container {
+    align-self: center;
+}
+
+.hidden {
+    display:none;
+}
+
+.player {
+    flex: 50%;
+    padding: 9rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+    gap: 3.5rem;
+}
+
+.name {
+    position: relative;
+    font-size: 4rem;
+}
+
+.current {
+    background-color: #FF0000;
+    opacity: 0.8;
+    border-radius: 9px;
+    color: #FFFFFF;
+    width: 65%;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.75s;
+}
+
+.current-label {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #ddd;
+}
+
+.current-score {
+    font-size: 3.5rem;
+}
+
+.btn {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   color: #444;
+   background: none;
+   border: none;
+   font-family: inherit;
+   font-size: 1.8rem;
+   cursor: pointer;
+   transition: all 0.2s;
+
+   background-color: white;
+   backdrop-filter: blur(10px);
+
+   padding: 0.7rem 2.5rem;
+   border-radius: 5rem;
+   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn--new {
+    top: 4rem;
+}
+
+.btn--rock {
+    top: 40rem;
+}
+
+.btn--paper {
+    top: 46rem;
+}
+
+.btn--scissor {
+    top: 52rem;
+}
+
+.versus {
+    position: absolute;
+    left: 50%;
+    top: 23rem;
+    transform: translateX(-50%);
 }
