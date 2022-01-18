@@ -6,6 +6,8 @@ body {
     height: 100vh;
     overflow: hidden;
     font-family: 'Walter Turncoat', Roboto;
+    background-color: #28282B;
+    color: #FFFFF0;
 }
 
 .header {
