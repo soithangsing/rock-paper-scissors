@@ -20,16 +20,10 @@ body {
     overflow:hidden;
     align-items:center;
     justify-content:center;
-    gap: 4rem;
+    gap: 1.5rem;
     background-color: #FFFFFF;
     background-image: linear-gradient(242deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
 }
-
-.icon-weapons-0-svg {
-    content: "\71";
-    color: #fcec7c;
-  }
-
 main {
     position: relative;
     width: 100rem;
@@ -43,11 +37,26 @@ main {
 }
 
 .header {
-    align-self: flex-start;
+    position: relative;
     font-size: 32px;
     font-family: 'Nova Mono', monospace;
     text-align: center;
-    width: 100%;
+    width: 80%;
+    padding: 10px;
+    backdrop-filter: blur(200px);
+    filter:blur;
+    box-shadow: 0 3rem 5rem rgba(0,0,0,0.25);
+    border-radius: 9px;
+}
+
+.footer {
+    position: relative;
+    font-size: 16px;
+    backdrop-filter: blur(200px);
+    filter:blur;
+    box-shadow: 0 3rem 5rem rgba(0,0,0,0.25);
+    border-radius: 12px;
+    padding: 5px;
 }
 
 .text-content {
@@ -92,7 +101,6 @@ main {
     display:flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.75s;
     gap: 3.5rem;
 }
 
@@ -109,7 +117,6 @@ main {
     width: 65%;
     padding: 2rem;
     text-align: center;
-    transition: all 0.75s;
 }
 
 .current-label {
@@ -125,16 +132,20 @@ main {
 .btn {
    position: absolute;
    left: 50%;
+   height: 50px;
+   width: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    transform: translateX(-50%);
    color: #444;
    background: none;
    border: none;
    font-family: inherit;
-   font-size: 1.8rem;
+   font-size: 3rem;
    cursor: pointer;
-   transition: all 0.2s;
 
-   background-color: white;
+   background-color: red;
    backdrop-filter: blur(10px);
 
    padding: 0.7rem 2.5rem;
@@ -144,6 +155,7 @@ main {
 
 .btn--new {
     top: 4rem;
+    background-color: royalblue;
 }
 
 .btn--rock {
@@ -158,9 +170,22 @@ main {
     top: 52rem;
 }
 
+.btn:active {
+  transform: translate(-50%, 5px) !important;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
 .versus {
     position: absolute;
     left: 50%;
     top: 23rem;
     transform: translateX(-50%);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.player--winner {
+    background-color: #7CFC00;
 }
