@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'rockpaperscissor';
+  src:  url('fonts/rockpaperscissor.eot?zb2lti');
+  src:  url('fonts/rockpaperscissor.eot?zb2lti#iefix') format('embedded-opentype'),
+    url('fonts/rockpaperscissor.ttf?zb2lti') format('truetype'),
+    url('fonts/rockpaperscissor.woff?zb2lti') format('woff'),
+    url('fonts/rockpaperscissor.svg?zb2lti#rockpaperscissor') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'rockpaperscissor' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weapons-0-svg .path1:before {
+  content: "\71";
+  color: rgb(252, 236, 124);
+}
+.icon-weapons-0-svg .path2:before {
+  content: "\72";
+  margin-left: -1em;
+  color: rgb(252, 220, 55);
+}
+.icon-weapons-0-svg .path3:before {
+  content: "\73";
+  margin-left: -1em;
+  color: rgb(252, 244, 172);
+}
+.icon-weapons-0-svg .path4:before {
+  content: "\74";
+  margin-left: -1em;
+  color: rgb(252, 236, 142);
+}
+.icon-weapons-0-svg .path5:before {
+  content: "\75";
+  margin-left: -1em;
+  color: rgb(252, 236, 162);
+}
+.icon-weapons-0-svg .path6:before {
+  content: "\76";
+  margin-left: -1em;
+  color: rgb(252, 228, 111);
+}
+.icon-weapons-0-svg .path7:before {
+  content: "\77";
+  margin-left: -1em;
+  color: rgb(252, 244, 176);
+}
+.icon-weapons-1-svg .path1:before {
+  content: "\61";
+  color: rgb(5, 5, 5);
+}
+.icon-weapons-1-svg .path2:before {
+  content: "\62";
+  margin-left: -1em;
+  color: rgb(251, 251, 251);
+}
+.icon-weapons-1-svg .path3:before {
+  content: "\63";
+  margin-left: -1em;
+  color: rgb(203, 203, 203);
+}
+.icon-weapons-1-svg .path4:before {
+  content: "\64";
+  margin-left: -1em;
+  color: rgb(107, 107, 107);
+}
+.icon-weapons-1-svg .path5:before {
+  content: "\6e";
+  margin-left: -1em;
+  color: rgb(148, 148, 148);
+}
+.icon-weapons-1-svg .path6:before {
+  content: "\6f";
+  margin-left: -1em;
+  color: rgb(92, 92, 92);
+}
+.icon-weapons-1-svg .path7:before {
+  content: "\70";
+  margin-left: -1em;
+  color: rgb(124, 124, 124);
+}
+.icon-weapons-1-svg .path8:before {
+  content: "\78";
+  margin-left: -1em;
+  color: rgb(175, 175, 175);
+}
+.icon-weapons-1-svg .path9:before {
+  content: "\79";
+  margin-left: -1em;
+  color: rgb(188, 188, 188);
+}
+.icon-weapons-2-svg .path1:before {
+  content: "\7a";
+  color: rgb(236, 189, 4);
+}
+.icon-weapons-2-svg .path2:before {
+  content: "\7b";
+  margin-left: -1em;
+  color: rgb(175, 179, 183);
+}
+.icon-weapons-2-svg .path3:before {
+  content: "\7c";
+  margin-left: -1em;
+  color: rgb(251, 219, 67);
+}
+.icon-weapons-2-svg .path4:before {
+  content: "\7d";
+  margin-left: -1em;
+  color: rgb(204, 164, 4);
+}
+.icon-weapons-2-svg .path5:before {
+  content: "\7e";
+  margin-left: -1em;
+  color: rgb(227, 201, 98);
+}
+.icon-weapons-2-svg .path6:before {
+  content: "\7f";
+  margin-left: -1em;
+  color: rgb(252, 212, 25);
+}
+.icon-weapons-2-svg .path7:before {
+  content: "\80";
+  margin-left: -1em;
+  color: rgb(204, 196, 164);
+}
+.icon-weapons-2-svg .path8:before {
+  content: "\81";
+  margin-left: -1em;
+  color: rgb(188, 196, 188);
+}
+.icon-weapons-2-svg .path9:before {
+  content: "\82";
+  margin-left: -1em;
+  color: rgb(196, 188, 140);
+}
