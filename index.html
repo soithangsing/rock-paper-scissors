@@ -10,40 +10,38 @@
     </head>
 
     <body>
-        <!-- <div class="play-area">
-            <button class="play-button">⚔️ FIGHT!!! ⚔️</button>
-            <button class="reload">🔄 RELOAD 🔄</button>
-        </div> -->
-        <!-- <div class="text-content">
-            <p>👉 Welcome to the Ultimate Rock, Paper, Scissors Showdown! 👈 <br> <br> 🖐️ First to 5 takes all! 🖐️</p>
-        </div> -->
+
         <div class="header"><p>Rock, Paper, Scissors Showdown!</p></div>
         <main>
         
-        <section class="player">
-            <h2 class="name" id="name--0">Player</h2>
-            <img src="images/weapons-0.png" height="200" width="200">
-            <div class="current">
+        <section class="player player--0">
+            <h2 class="name name--0">Player</h2>
+            <img class="player-0-pick" src="images/weapons-0.png" height="200" width="200">
+            <div class="current current-0">
+                <p class="current-label">Current Score</p>
+                <p class="current-score" id="current-0">0</p>
+            </div>
+        </section>
+        <section class="player player--1">
+            <h2 class="name name--1">Bot</h2>
+            <img class="player-1-pick" src="images/weapons-2.png" height="200" width="200">
+            <div class="current current-1">
                 <p class="current-label">Current Score</p>
                 <p class="current-score" id="current-1">0</p>
             </div>
         </section>
-        <section class="player">
-            <h2 class="name" id="name--0">Computer</h2>
-            <img src="images/weapons-2.png" height="200" width="200">
-            <div class="current">
-                <p class="current-label">Current Score</p>
-                <p class="current-score" id="current-1">0</p>
-            </div>
-        </section>
-        <div class="versus">Player wins!<br> Rock beats scissor!</div>
+        <div class="versus">Let's <br> Start playing by<br>selecting<br>rock,paper or scissor<br>below!</div>
+
         <button class="btn btn--new">🔄</button>
+
         <button class="btn btn--rock"><span class="icon icon-weapons-0-svg"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></span></button>
+
         <button class="btn btn--paper"><span class="icon icon-weapons-1-svg"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span></span></button>
+
         <button class="btn btn--scissor"><span class="icon icon-weapons-2-svg"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span></span></button>
         </main>
 
-        <div class="footer"><p>Made by Soilianmang Thangsing © 2022</p></div>
+        <div class="footer"><p>Made by <a href="https://twitter.com/theofficialsoi">Soilianmang Thangsing</a> © 2022</p></div>
         <script src="script.js"></script>
     </body>
 </html>
