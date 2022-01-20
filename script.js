@@ -124,7 +124,13 @@ function executePlay3() {
 }
 
 function newGame() {
-    location.reload()
+    playerScore = 0, computerScore = 0;
+    playing=true;
+    scoreBox0.textContent = `${playerScore}`;
+    scoreBox1.textContent = `${computerScore}`;
+    bigScoreBox0.classList.remove('current--winner--background') && playerName.classList.remove('player--name--winner') || bigScoreBox1.classList.remove('current--winner--background');
+    botName.classList.remove('player--name--winner');;
+
 }
 
 const openModal = function () {

@@ -27,7 +27,7 @@ body {
 main {
     position: relative;
     width: 100rem;
-    height: 60rem;
+    height: 85rem;
     backdrop-filter: blur(200px);
     filter:blur;
     box-shadow: 0 3rem 5rem rgba(0,0,0,0.25);
@@ -59,6 +59,7 @@ main {
     padding: 5px;
     text-align: center;
     gap: 0;
+    height:fit-content;
 }
 
 .hidden {
@@ -124,20 +125,20 @@ main {
 }
 
 .btn--new {
-    top: 4rem;
+    top: 2rem;
     background-color: royalblue;
 }
 
 .btn--rock {
-    top: 40rem;
+    top: 38rem;
 }
 
 .btn--paper {
-    top: 46rem;
+    top: 44rem;
 }
 
 .btn--scissor {
-    top: 52rem;
+    top: 50rem;
 }
 
 .btn:active {
@@ -148,7 +149,7 @@ main {
 .versus {
     position: absolute;
     left: 50%;
-    top: 21rem;
+    top: 19rem;
     transform: translateX(-50%);
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -218,4 +219,10 @@ a:hover {
 
   .modal p {
     font-size: 1.8rem;
+  }
+
+  audio {
+      display: block;
+      width: 200px;
+      height: 50px;
   }
