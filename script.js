@@ -130,7 +130,7 @@ function newGame() {
     scoreBox1.textContent = `${computerScore}`;
     bigScoreBox0.classList.remove('current--winner--background') && playerName.classList.remove('player--name--winner') || bigScoreBox1.classList.remove('current--winner--background');
     botName.classList.remove('player--name--winner');;
-
+    displayMessage.innerHTML = `Let's <br> Start playing by<br>selecting<br>rock,paper or scissor<br>below!`;
 }
 
 const openModal = function () {

@@ -220,6 +220,10 @@ a:hover {
     font-size: 1.8rem;
   }
 
+  .modal a {
+      text-decoration: none;
+  }
+
   audio {
       display: block;
       width: 200px;
