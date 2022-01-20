@@ -24,6 +24,11 @@ const btnRock = document.querySelector('.btn--rock');
 const btnPaper = document.querySelector('.btn--paper');
 const btnScissor = document.querySelector('.btn--scissor');
 
+const modal = document.querySelector('.modal');
+const modalButton = document.querySelector('.modal-open');
+const btnCloseModal = document.querySelector('.close-modal');
+const overlay = document.querySelector('.overlay');
+
 // Selecting Elements
 
 const weapons = ['rock', 'paper', 'scissor'];
@@ -122,7 +127,21 @@ function newGame() {
     location.reload()
 }
 
+const openModal = function () {
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+  };
+
+  const closeModal = function () {
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+  };
+
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
 btnRock.addEventListener('click', executePlay1)
 btnPaper.addEventListener('click', executePlay2)
 btnScissor.addEventListener('click', executePlay3)
 btnNew.addEventListener('click', newGame)
+modalButton.addEventListener('click', openModal)
