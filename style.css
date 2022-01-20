@@ -27,7 +27,7 @@ body {
 main {
     position: relative;
     width: 100rem;
-    height: 85rem;
+    height: 60rem;
     backdrop-filter: blur(200px);
     filter:blur;
     box-shadow: 0 3rem 5rem rgba(0,0,0,0.25);
@@ -58,7 +58,6 @@ main {
     border-radius: 12px;
     padding: 5px;
     text-align: center;
-    gap: 0;
     height:fit-content;
 }
 
