@@ -29,12 +29,15 @@ const modalButton = document.querySelector('.modal-open');
 const btnCloseModal = document.querySelector('.close-modal');
 const overlay = document.querySelector('.overlay');
 
+const musicButton = document.querySelector('.btn--music');
+const audioElement = document.getElementById('music-element');
 // Selecting Elements
 
 const weapons = ['rock', 'paper', 'scissor'];
 
 let playerScore = 0, computerScore = 0;
 let playing = true;
+let music = false;
 
 function randomPick () {
     const randomPick = weapons[Math.floor(Math.random() * weapons.length)];
@@ -128,8 +131,20 @@ function newGame() {
     playing=true;
     scoreBox0.textContent = `${playerScore}`;
     scoreBox1.textContent = `${computerScore}`;
-    bigScoreBox0.classList.remove('current--winner--background') && playerName.classList.remove('player--name--winner') || bigScoreBox1.classList.remove('current--winner--background');
-    botName.classList.remove('player--name--winner');;
+
+    if (bigScoreBox0.classList.contains('current--winner--background')) {
+        bigScoreBox0.classList.remove('current--winner--background');
+    } else if ( bigScoreBox1.classList.contains('current--winner--background')) {
+        bigScoreBox1.classList.remove('current--winner--background');
+    }
+    
+    if(playerName.classList.contains('player--name--winner')) {
+        playerName.classList.remove('player--name--winner');
+    }
+    else if(botName.classList.contains('player--name--winner')) {
+        botName.classList.remove('player--name--winner');
+    }
+    
     displayMessage.innerHTML = `Let's <br> Start playing by<br>selecting<br>rock,paper or scissor<br>below!`;
 }
 
@@ -151,3 +166,15 @@ btnPaper.addEventListener('click', executePlay2)
 btnScissor.addEventListener('click', executePlay3)
 btnNew.addEventListener('click', newGame)
 modalButton.addEventListener('click', openModal)
+
+musicButton.addEventListener('click', function(e) {
+    musicButton.classList.toggle('music-off')
+
+    if (musicButton.classList.contains('music-off'))  {
+        musicButton.textContent = '🔕';
+        audioElement.pause()
+    } else {
+        musicButton.textContent = '🔔'
+        audioElement.play();
+    }
+})
