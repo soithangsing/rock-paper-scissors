@@ -145,7 +145,7 @@ function newGame() {
         botName.classList.remove('player--name--winner');
     }
     
-    displayMessage.innerHTML = `Let's <br> Start playing by<br>selecting<br>rock,paper or scissor<br>below!`;
+    displayMessage.innerHTML = `Let's <br> Start playing by<br>selecting<br>rock,paper or scissor<br>below! <br> First to score 5 wins!`;
 }
 
 const openModal = function () {
